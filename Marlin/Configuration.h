@@ -941,7 +941,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.4, 80.4, 1616, 453.46 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.4, 80.4, 1616, 419.87 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1044,11 +1044,11 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+// #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 #if ENABLED(SPRO_BLTOUCH)
-#define USE_PROBE_FOR_Z_HOMING
+  #define USE_PROBE_FOR_Z_HOMING
 #endif
 
 /**
@@ -1198,11 +1198,11 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {  0, -32, -2.35 }
+#define NOZZLE_TO_PROBE_OFFSET {  0, -32, -3.35 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 10
+#define PROBING_MARGIN 30
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1375,7 +1375,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-#define Z_HOMING_HEIGHT 10 // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ... \
+#define Z_HOMING_HEIGHT 10 // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps,
                            // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 //#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
