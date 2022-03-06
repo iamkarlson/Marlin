@@ -45,3 +45,15 @@
 //#define LED_PIN                           PB2
 
 #include "pins_MKS_ROBIN_NANO_common.h"
+
+#define Y_SERIAL_TX_PIN PC13
+#define Y_SERIAL_RX_PIN PC13
+
+#define X_SERIAL_TX_PIN PC7
+#define X_SERIAL_RX_PIN PC7
+
+#define Z_SERIAL_TX_PIN PB13
+#define Z_SERIAL_RX_PIN PB13
+
+#define E0_SERIAL_TX_PIN PE5
+#define E0_SERIAL_RX_PIN PE5
